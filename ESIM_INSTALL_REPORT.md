@@ -77,4 +77,15 @@
 - The full installation did not complete because of Issue 5.
 
 ## Evidence
-Screenshots of the syntax error, the `git diff` showing `+fi`, and the `tar` error are in the `screenshots/` folder of this branch.
+
+### Issue 4: syntax error at line 70 and the fix
+![Issue 4 fix](issue%204%20fix.jpg)
+The syntax error at line 70, and `git diff` showing the one-line fix (`+fi`).
+
+### Issues 5 and 6: kicadLibrary tarball and stray lines
+![Issues 5 and 6](issue%205,6.jpg)
+KiCad installs successfully, then `tar` cannot open `library/kicadLibrary.tar.xz` and the installer aborts. The `/: Is a directory` lines are Issue 6.
+
+### Issue 5: proof the tarball does not exist
+![Issue 5 proof](issue%205%20proof.jpg)
+`git ls-tree` on upstream/master lists only `sky130_fd_pr.tar.xz` and the NGHDL tarball, so `kicadLibrary.tar.xz` does not exist.
