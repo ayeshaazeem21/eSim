@@ -92,6 +92,4 @@ KiCad installs successfully, then `tar` cannot open `library/kicadLibrary.tar.xz
 ![Issues 5 and 6](issue%205,6.jpg)
 KiCad installs successfully, then `tar` cannot open `library/kicadLibrary.tar.xz` and the installer aborts. The `/: Is a directory` lines are Issue 6.
 
-### Issue 5: proof the tarball does not exist
-![Issue 5 proof](issue%205%20proof.jpg)
-`git ls-tree` on upstream/master lists only `sky130_fd_pr.tar.xz` and the NGHDL tarball, so `kicadLibrary.tar.xz` does not exist.
+
