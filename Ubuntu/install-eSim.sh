@@ -55,14 +55,14 @@ run_version_script() {
             ;;
     esac
 
-       # Run the script if found
+          # Run the script if found
     if [[ -f "$SCRIPT" ]]; then
         echo "Running script: $SCRIPT $ARGUMENT"
         bash "$SCRIPT" "$ARGUMENT"
-    echo "[eSim]" >> $config_dir/$config_file
-    ...
-    echo "MODELICA_MAP_JSON = ..." >> $config_dir/$config_file
-   
+    else
+        echo "Script not found: $SCRIPT"
+        exit 1
+    fi
 }
 
 
